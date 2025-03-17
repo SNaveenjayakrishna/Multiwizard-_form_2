@@ -1,0 +1,194 @@
+.bubble{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url('bubble.png');
+    background-size: contain;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: rakib 3s linear infinite;
+    background: linear-gradient(to bottom, #56ccf2, #2f80ed);
+}
+@keyframes rakib{
+    0%{
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+    100%{
+        transform: translate(-50%, -1000%);
+        opacity: 0;
+    }
+}
+body, html {
+    height: 100%; /* Ensure the body and html have 100% height */
+    background: linear-gradient(to bottom right, #1f4037, #99f2c8);
+
+}
+.form_reg{
+    background: linear-gradient(to bottom right, #1e3c72, #2a5298);
+    color: white;
+    margin: auto;
+    height: auto;
+    width: 40%;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 20px;
+   
+}
+
+
+.tab h2{
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    margin: -20px -20px 10px -20px;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.tab label, input, select{
+    display: block;
+    margin-top: 10px;
+}
+.tab input, select {
+    background: linear-gradient(to right, #ffffff, #e6e6e6);
+    border: 1px solid #ccc;
+}
+.tab label{
+    font-weight: bold;
+}
+.tab input, select{
+    padding: 5px;
+}
+.tab{
+    display: none;
+}
+#form_submitted{
+    text-align: center; 
+    font-weight: bold; 
+    color: white; 
+    font-family: cursive; 
+    font-size: large;
+}
+.button{
+    margin: 10px;
+
+    padding: 2px;
+}
+.circle{
+    text-align: center;
+    
+}
+
+.step{
+    height: 15px;
+    width: 15px;
+    display: inline-block;
+    background: linear-gradient(to bottom, #ff9966, #ff5e62);
+    border-radius: 10px;
+    margin: 20px;
+    opacity: 0.5;
+}
+
+.step.active{
+    opacity: 1;
+}
+.step.finish{
+    background-color: #04AA6D;
+}
+
+.prevBtn, .nextBtn{
+    background: linear-gradient(to bottom, #11998e, #38ef7d);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border-width: 1px solid black;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px grey;
+    color: white;
+    transition: transform 0.2s ease;
+    position: relative;
+    font-size: 16px;
+    text-align: center;
+}
+
+.prevBtn{
+    float: left;
+}
+.nextBtn{
+    float: right;
+}
+.prevBtn:active, .nextBtn:active{
+    transform: scale(0.96);
+}
+#prevBtn:hover, #nextBtn:hover{
+    background: linear-gradient(to bottom, #ff512f, #dd2476);
+    font-size: large;
+}
+/*-----------------*/
+.prevBtn::after, .nextBtn::after, .prevBtn::before, .nextBtn::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 150%;
+    
+    background-repeat: no-repeat;
+}
+/*-----------------*/
+.prevBtn.animate::before, .nextBtn.animate::before{
+    top: -70%;
+    background-image: radial-gradient(circle, #04AA6D 20%, transparent 20%),
+    radial-gradient(circle,transparent 20%, #04AA6D 20%, transparent 30%),
+    radial-gradient(circle, #04AA6D 20%, transparent 20%),
+    radial-gradient(circle,transparent 10%, #04AA6D 15%, transparent 20%),
+    radial-gradient(circle, #04AA6D 20%, transparent 20%),
+    radial-gradient(circle, #04AA6D 20%, transparent 20%),
+    radial-gradient(circle,  #04AA6D 20%, transparent 20%),
+    radial-gradient(circle, #04AA6D 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+    animation: topBubbles 0.6s ease-in-out infinite;
+}
+/*-----------------*/
+@keyframes topBubbles {
+    50% {
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+    }
+    100%{
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 30%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+/*-----------------*/
+.prevBtn.animate::after, .nextBtn.animate::after{
+    bottom: -70%;
+    background-image: radial-gradient(circle, #04AA6D 20%, transparent 20%),
+    radial-gradient(circle,transparent 10%, #04AA6D 15%, transparent 20%),
+    radial-gradient(circle, #04AA6D 20%, transparent 20%),
+    radial-gradient(circle, #04AA6D 20%, transparent 20%),
+    radial-gradient(circle, #04AA6D 20%, transparent 20%),
+    radial-gradient(circle,  #04AA6D 20%, transparent 20%),
+    radial-gradient(circle, #04AA6D 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+    background-position: 10% 0%, 30% 10%, 55% 0%, 70% 0%, 85% 0%, 70% 0%, 70% 0%;
+    animation: bottomBubbles 0.6s ease-in-out infinite;
+}
+/*-----------------*/
+@keyframes bottomBubbles {
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+    }
+    100%{
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+/*-----------------*/
+
+.error{
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+}
