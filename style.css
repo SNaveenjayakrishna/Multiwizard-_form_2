@@ -192,3 +192,120 @@ body, html {
     display: block;
     margin-top: 5px;
 }
+
+@media (max-width: 768px) and (min-width:484px) {
+    body, html {
+        height: 100%; /* Ensure the body and html have 100% height */
+        background: linear-gradient(to bottom right, #ff512f, #dd2476);
+    
+    }
+    .form_reg {
+        all: unset; /* Removes all styles */
+        width: 100%; /* Optionally set it to full width */
+        color: white;
+        margin: auto;
+        height: auto;
+        width: auto;
+    }
+   
+    
+    
+    .tab h2{
+        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+       width: 100%;
+        padding: 10px;
+        text-align: center;
+ 
+    }
+    .tab label, input, select{
+        display: block;
+        margin-top: 10px;
+        font-size: 100%;
+    }
+    .tab input, select {
+        background: linear-gradient(to right, #ffffff, #e6e6e6);
+        border: 1px solid #ccc;
+        padding: 5px;
+        width: 50%;
+    }
+
+  
+
+   
+    .step{
+        height: 15px;
+        width: 15px;
+        display: inline-block;
+        background: linear-gradient(to bottom, #ff9966, #ff5e62);
+        border-radius: 10px;
+        margin: 18px;
+        opacity: 0.5;
+    }
+    
+}
+
+
+@media (max-width: 484px) {
+    body, html {
+        height: 100%; /* Ensure the body and html have 100% height */
+        background: linear-gradient(to bottom right, #ff512f, #dd2476);
+    
+    }
+    .form_reg {
+        all: unset; /* Removes all styles */
+        width: 100%; /* Optionally set it to full width */
+        color: white;
+        margin: auto;
+        height: auto;
+        width: auto;
+    }
+   
+    
+    
+    .tab h2{
+        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+       width: 100%;
+       padding: 10px;
+      text-align: center;
+ 
+    }
+    .tab label, input, select{
+        display: block;
+        margin-top: 10px;
+        font-size: 100%;
+    }
+    .tab input, select {
+        background: linear-gradient(to right, #ffffff, #e6e6e6);
+        border: 1px solid #ccc;
+        padding: 5px;
+        width: 100%;
+    }
+
+
+    .step{
+        height: 10px;
+        width: 10px;
+        display: inline-block;
+        background: linear-gradient(to bottom, #ff9966, #ff5e62);
+        border-radius: 10px;
+        margin: 5px;
+        opacity: 0.5;
+    }
+    .prevBtn, .nextBtn{
+        background: linear-gradient(to bottom, #11998e, #38ef7d);
+        padding: 7px 10px;
+        border-radius: 5px;
+        border-width: 1px solid black;
+        cursor: pointer;
+        box-shadow: 2px 2px 5px grey;
+        color: white;
+        transition: transform 0.2s ease;
+        position: relative;
+        font-size: 10px;
+        text-align: center;
+    }
+    
+    
+    
+   
+}
